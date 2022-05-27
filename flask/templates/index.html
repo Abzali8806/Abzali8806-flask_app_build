@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>FA Home</title>
+{% endblock %}
+
+{% block body %}
+<h3>Form</h1><br><br>
+
+    <form action="/submit" method="POST">
+        <label for="fname">First name</label><br>
+        <input type="text" name="fname" id="fname"><br><br>
+        <label for="lname">Last name</label><br>
+        <input type="text" name="lname" id="lname"><br><br>
+
+        <label for="pets">Choose your pet</label>
+        <select name="pets" id="pets">
+            <option value="owl">Owl</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="rat">Rat</option>
+        </select><br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+    {% endblock %}
